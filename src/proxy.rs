@@ -880,7 +880,7 @@ fn get_from_registry_impl() -> Result<RegistryProxyValues, Box<dyn Error>> {
 
 #[cfg(target_os = "windows")]
 fn get_from_registry() -> Option<RegistryProxyValues> {
-    get_from_registry_impl().ok()
+    None // get_from_registry_impl().ok()
 }
 
 #[cfg(not(target_os = "windows"))]
